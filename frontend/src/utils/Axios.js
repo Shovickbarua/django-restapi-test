@@ -1,9 +1,8 @@
 import Axios from 'axios'
 
-const baseURL = 'http://127.0.0.1:8000/';
+
 const axios = Axios.create({
-    // baseURL: process.env.BASE_URL,
-    baseURL: baseURL,
+    baseURL: import.meta.env.VITE_BASE_URL,
     headers:{
         'X-Requested-With': 'XMLHttpRequest',
     }
