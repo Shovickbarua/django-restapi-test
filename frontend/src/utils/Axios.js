@@ -5,7 +5,8 @@ const axios = Axios.create({
     baseURL: import.meta.env.VITE_BASE_URL,
     headers:{
         'X-Requested-With': 'XMLHttpRequest',
-    }
+    },
+    withCredentials:true
 })
 
 axios.interceptors.request.use(
